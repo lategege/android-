@@ -30,6 +30,7 @@ public class ImageLoader {
     private LruCache<String, Bitmap> imageCache = new LruCache<>(cacheSize);
 
     public static ImageLoader getInstance() {
+
         synchronized (object) {
             if (imageLoader == null) {
                 imageLoader = new ImageLoader();
